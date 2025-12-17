@@ -51,6 +51,18 @@
                     </div>
 
                     <div class="item">
+                        <input type="checkbox" id="1-2a" class="checkbox">
+                        <label for="1-2a" class="item-content">
+                            <strong>Активность DEX</strong>
+                            <ul>
+                                <li>Проверить сколько токенов у создателя мигрировало, а сколько нет и как себя вели (DEV TOKENS).</li>
+                                <li>Анализировать паттерны поведения разработчика на DEX платформах.</li>
+                                <li>Проверить наличие подозрительных транзакций или манипуляций.</li>
+                            </ul>
+                        </label>
+                    </div>
+
+                    <div class="item">
                         <input type="checkbox" id="1-3" class="checkbox">
                         <label for="1-3" class="item-content">
                             <strong>Холдеры</strong>
@@ -472,6 +484,96 @@
                                 <li>Минимум 2 стратегии выхода: частичный выход на 1.5–2х, остальное — трейл.</li>
                             </ul>
                         </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Напоминание по правилам входа -->
+            <section class="stage reminder-section" id="trading-reminder">
+                <div class="stage-header">
+                    <h2 class="stage-title">КЛЮЧЕВЫЕ НАПОМИНАНИЯ ПО ВХОДУ В СДЕЛКИ</h2>
+                    <span class="stage-goal">Трейдинг-дисциплина превыше всего</span>
+                </div>
+                <div class="checklist reminder-list">
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3V21H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21 9L15 9L12 12L9 6L3 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Уровни Фибоначчи:</strong> Заходим только когда уровни поддержки совпадают с зоной проторговки и на прошлом уровне были высокие объёмы
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Зона входа:</strong> Преимущественно заходим в канале 0.7, в идеале — строго от линии 0.7
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L3 7V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Stop Loss:</strong> Устанавливаем от линии 0.7 до 50% от позиции в зависимости от волатильности
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 9V11M12 15H12.01M5.07183 19H18.9282C20.4678 19 21.4301 17.3333 20.6603 16L13.7321 4C12.9623 2.66667 11.0378 2.66667 10.268 4L3.33978 16C2.56998 17.3333 3.53222 19 5.07183 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Альтернативный вход:</strong> Допустимо заходить по уровню 0.6, но только при наличии активного роста холдеров
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 19V13L3 7V3H7L13 9H19L21 11V21H9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 7L9 13L13 9L19 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Сигнал роста:</strong> Рост холдеров при сильной поддержке = высокая вероятность скачка вверх
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1V23M17 5H9.5C8.57174 5 7.6815 5.36875 7.02513 6.02513C6.36875 6.6815 6 7.57174 6 8.5C6 9.42826 6.36875 10.3185 7.02513 10.9749C7.6815 11.6313 8.57174 12 9.5 12H14.5C15.4283 12 16.3185 12.3687 16.9749 13.0251C17.6313 13.6815 18 14.5717 18 15.5C18 16.4283 17.6313 17.3185 16.9749 17.9749C16.3185 18.6313 15.4283 19 14.5 19H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Take Profit:</strong> Целевые зоны 30-45% от входа, шаг фиксации прибыли — 12%
+                        </div>
+                    </div>
+
+                    <div class="reminder-item">
+                        <div class="reminder-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 21H21M3 3H21M5 21V7L12 3L19 7V21M9 21V13H15V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="reminder-content">
+                            <strong>Правило выхода:</strong> По общему правилу фиксируем максимум на 70-80% позиции, если токен продолжает движение — выходим в оранжевой зоне Фибоначчи
+                        </div>
                     </div>
                 </div>
             </section>

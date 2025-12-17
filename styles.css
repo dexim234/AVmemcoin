@@ -617,3 +617,143 @@ html {
     transform: translateY(-1px) scale(1.02);
 }
 
+/* Стили для раздела напоминаний */
+.reminder-section {
+    background: linear-gradient(135deg, rgba(78, 110, 73, 0.1) 0%, rgba(78, 110, 73, 0.08) 100%);
+    border: 2px solid rgba(78, 110, 73, 0.3);
+    border-radius: 20px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.reminder-section::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    opacity: 0.6;
+    animation: rocketFloat 3s ease-in-out infinite;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234E6E49'%3E%3Cpath d='M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+}
+
+.reminder-section .stage-header {
+    background: linear-gradient(135deg, #4E6E49 0%, #6b8f5f 100%);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.reminder-section .stage-title {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.reminder-section .stage-goal {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+}
+
+.reminder-list {
+    padding: 30px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 165, 0, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.reminder-item:hover {
+    background: rgba(78, 110, 73, 0.1);
+    border-color: rgba(78, 110, 73, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(78, 110, 73, 0.2);
+}
+
+.reminder-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+    animation: iconBounce 2s ease-in-out infinite;
+    color: #4E6E49;
+}
+
+.reminder-icon svg {
+    width: 24px;
+    height: 24px;
+    color: #4E6E49;
+}
+
+.reminder-content {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.reminder-content strong {
+    color: #4E6E49;
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.reminder-content {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+/* Анимации для напоминаний */
+@keyframes rocketFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-5px) rotate(2deg); }
+    66% { transform: translateY(5px) rotate(-2deg); }
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Адаптивность для напоминаний */
+@media (max-width: 768px) {
+    .reminder-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .reminder-item {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .reminder-icon {
+        margin-bottom: 10px;
+    }
+
+    .reminder-section .stage-title {
+        font-size: 1.4rem;
+    }
+
+    .reminder-section::before {
+        width: 30px;
+        height: 30px;
+        top: 15px;
+        right: 15px;
+    }
+}
+
