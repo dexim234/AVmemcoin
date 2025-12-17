@@ -649,11 +649,14 @@ html {
     font-size: 1.6rem;
     color: #FFFFFF;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
 }
 
 .reminder-section .stage-goal {
     color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
+    text-align: center;
+    display: block;
 }
 
 .reminder-list {
@@ -669,7 +672,7 @@ html {
     gap: 15px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 165, 0, 0.2);
+    border: 2px solid #4E6E49;
     border-radius: 12px;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
@@ -677,9 +680,9 @@ html {
 
 .reminder-item:hover {
     background: rgba(78, 110, 73, 0.1);
-    border-color: rgba(78, 110, 73, 0.5);
+    border-color: #6b8f5f;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(78, 110, 73, 0.2);
+    box-shadow: 0 8px 25px rgba(78, 110, 73, 0.3);
 }
 
 .reminder-icon {
@@ -716,6 +719,16 @@ html {
     font-size: 0.95rem;
 }
 
+.reminder-content a {
+    color: #4E6E49;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.reminder-content a:hover {
+    color: #6b8f5f;
+}
+
 /* Анимации для напоминаний */
 @keyframes rocketFloat {
     0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -739,10 +752,25 @@ html {
         padding: 15px;
         flex-direction: column;
         text-align: center;
+        align-items: center;
     }
 
     .reminder-icon {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reminder-content {
+        text-align: center;
+        width: 100%;
+    }
+
+    .reminder-content strong {
+        display: block;
+        text-align: center;
+        margin-bottom: 8px;
     }
 
     .reminder-section .stage-title {
